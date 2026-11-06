@@ -15,7 +15,22 @@
 \maketitle
 
 \section{Clasificación de Enunciados (Tabla 1)}
+\begin{table}[htpb]
+    \centering
+    \caption{Clasificación de los enunciados de la plataforma}
+    \label{tab:clasificacion}
+    \begin{tabularx}{\textwidth}{|c|X|X|l|l|X|}
+\hline
+\textbf{Cód} & \textbf{Enunciado (Estructurado)} & \textbf{Dim 1: Tipo} & \textbf{Dim 2: Prod/Proc} & \textbf{Dim 3: Sis/Soft} & \textbf{Justificación} \\ \hline
 
+E01 & El sistema deberá permitir al paciente reservar una cita eligiendo especialidad, médico, fecha y hora. & Funcional & Producto & Software & Describe una función o servicio directo que el software debe proveer al usuario. \\ \hline
+E02 & El sistema deberá enviar al paciente un recordatorio por mensaje de texto 24 horas antes. & Funcional & Producto & Sistema & Describe un servicio a proveer que requiere la combinación de software y redes de telecomunicación externas. \\ \hline
+E03 & La aplicación debe ser rápida. & Calidad (Eficiencia de desempeño - Comportamiento temporal) & Producto & Software & Describe una propiedad transversal del software sobre tiempos de respuesta, sin especificar una función. \\ \hline
+E04 & El sistema deberá permitir al recepcionista registrar la llegada del paciente en ventanilla. & Funcional & Producto & Sistema & Describe una tarea que el sistema debe ejecutar, involucrando personas (recepcionista) y procesos operativos. \\ \hline
+E05 & El proveedor deberá entregar la plataforma basada en Java 21 y PostgreSQL. & Restricción & Proceso & Software & Limita las opciones de diseño al imponer tecnologías obligatorias (Restricción Tecnológica). \\ \hline
+
+    \end{tabularx}
+\end{table}
 
 \section{Cuantificación de Requisitos de Calidad}
 
