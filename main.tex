@@ -19,14 +19,13 @@
 }
 
 \title{\textbf{Universidad Técnica Estatal de Quevedo}\\[0.3em]
-\large Facultad de Ciencias de la Computación --- Carrera de Software\\[0.5em]
+\large Facultad de Ciencias de la Computación, Carrera de Software\\[0.5em]
 \Large Ingeniería de Requerimientos (ISR-401)\\[0.8em]
 \LARGE \textbf{Actividad Formativa FORM-TL-01}\\
 \Large Taller de tipos de requisitos}
 
 \author{\textbf{Estudiante:} Luis Alberto Paca Pilataza \\
-\textbf{Docente:} Gleiston Cicerón Guerrero Ulloa, PhD \\
-\textbf{Curso:} 4.\textsuperscript{o} Nivel Software --- Paralelo A}
+\textbf{Curso:} 4.\textsuperscript{o} Nivel Software, Paralelo A}
 \date{Octubre 2026}
 
 \begin{document}
@@ -40,11 +39,11 @@ A continuación se presenta la clasificación de los 20 enunciados del caso de e
 \begin{small}
 \begin{xltabular}{\textwidth}{|c|X|p{3.4cm}|c|c|X|}
 \hline
-\textbf{Cód.} & \textbf{Enunciado} & \textbf{Dim. 1: Tipo} & \textbf{Dim. 2} & \textbf{Dim. 3} & \textbf{Justificación} \\ \hline
+\textbf{Cód.} & \textbf{Enunciado (Resumido)} & \textbf{Dim. 1: Tipo} & \textbf{Dim. 2} & \textbf{Dim. 3} & \textbf{Justificación} \\ \hline
 \endfirsthead
 
 \hline
-\textbf{Cód.} & \textbf{Enunciado} & \textbf{Dim. 1: Tipo} & \textbf{Dim. 2} & \textbf{Dim. 3} & \textbf{Justificación} \\ \hline
+\textbf{Cód.} & \textbf{Enunciado (Resumido)} & \textbf{Dim. 1: Tipo} & \textbf{Dim. 2} & \textbf{Dim. 3} & \textbf{Justificación} \\ \hline
 \endhead
 
 \hline
@@ -54,57 +53,57 @@ A continuación se presenta la clasificación de los 20 enunciados del caso de e
 \hline
 \endlastfoot
 
-E01 & El paciente podrá reservar una cita eligiendo especialidad, médico, fecha y hora entre los horarios disponibles. & Funcional & Producto & Software & Es un servicio directo de reserva que el programa debe ofrecer al paciente en pantalla. \\ \hline
+E01 & El sistema debe permitir al paciente reservar citas médicas eligiendo especialidad, médico y horario. & Funcional & Producto & Software & Es un servicio directo de reserva que el programa debe ofrecer al paciente en pantalla. \\ \hline
 
-E02 & La plataforma enviará al paciente un recordatorio por mensaje de texto 24 horas antes de su cita. & Funcional & Producto & Sistema & Requiere que el programa se conecte con una red celular externa para entregar el mensaje. \\ \hline
+E02 & El sistema debe enviar un mensaje de texto de recordatorio al paciente 24 horas antes de su cita. & Funcional & Producto & Sistema & Requiere que el programa se conecte con una red celular externa para entregar el mensaje. \\ \hline
 
-E03 & La aplicación debe ser rápida. & Calidad (Eficiencia de desempeño --- Comportamiento temporal) & Producto & Software & Expresa una expectativa sobre el tiempo de respuesta del programa sin definir una tarea específica. \\ \hline
+E03 & La aplicación debe ser rápida. & Calidad (Eficiencia de desempeño, Comportamiento temporal) & Producto & Software & Expresa una expectativa sobre el tiempo de respuesta del programa sin definir una tarea específica. \\ \hline
 
-E04 & El recepcionista podrá registrar la llegada del paciente que se acerca a la ventanilla. & Funcional & Producto & Sistema & Apoya una tarea de atención presencial donde interactúan la persona en ventanilla y el flujo de la clínica. \\ \hline
+E04 & El sistema debe permitir al recepcionista registrar en ventanilla la llegada presencial del paciente. & Funcional & Producto & Sistema & Apoya una tarea de atención presencial donde interactúan la persona en ventanilla y el flujo de la clínica. \\ \hline
 
-E05 & La plataforma se desarrollará en Java 21 con base de datos PostgreSQL, tecnologías que domina el área de TI. & Restricción (Tecnológica / Arquitectura) & Producto & Software & Obliga a usar un lenguaje y una base de datos específicos para construir el programa. \\ \hline
+E05 & La plataforma se construirá con lenguaje Java 21 y base de datos PostgreSQL. & Restricción (Tecnológica, Arquitectura) & Producto & Software & Obliga a usar un lenguaje y una base de datos específicos para construir el programa. \\ \hline
 
-E06 & El médico podrá consultar la lista de pacientes del día y marcar cada consulta como atendida. & Funcional & Producto & Software & Define opciones directas de consulta y cambio de estado dentro de la agenda del médico. \\ \hline
+E06 & El sistema debe permitir al médico consultar la lista diaria de citas y marcar las consultas atendidas. & Funcional & Producto & Software & Define opciones directas de consulta y cambio de estado dentro de la agenda del médico. \\ \hline
 
-E07 & Los datos de salud de los pacientes deben estar seguros. & Calidad (Seguridad --- Confidencialidad e Integridad) & Producto & Software & Pide proteger la información médica para que no sea vista ni modificada por personas no autorizadas. \\ \hline
+E07 & Los datos de salud de los pacientes deben estar seguros. & Calidad (Seguridad, Confidencialidad e Integridad) & Producto & Software & Pide proteger la información médica para que no sea vista ni modificada por personas no autorizadas. \\ \hline
 
-E08 & La aplicación móvil debe funcionar en teléfonos con Android 10 o superior. & Restricción (Entorno operativo) & Producto & Sistema & Fija los modelos de celular y versiones de sistema operativo donde debe funcionar la aplicación. \\ \hline
+E08 & La aplicación móvil debe funcionar en teléfonos con sistema operativo Android 10 o superior. & Restricción (Entorno operativo) & Producto & Sistema & Fija los modelos de celular y versiones de sistema operativo donde debe funcionar la aplicación. \\ \hline
 
-E09 & Una cita cancelada con menos de cuatro horas de anticipación se registrará como inasistencia. & Funcional (Regla de negocio) & Producto & Software & Establece una regla interna de atención que el programa debe aplicar de forma automática. \\ \hline
+E09 & El sistema debe registrar como inasistencia toda cita cancelada con menos de cuatro horas de anticipación. & Funcional (Regla de negocio) & Producto & Software & Establece una regla interna de atención que el programa debe aplicar de forma automática. \\ \hline
 
-E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores. & Calidad (Capacidad de interacción --- Aprendizaje y Accesibilidad) & Producto & Sistema & Describe la facilidad y comodidad de uso orientada a las capacidades de las personas de la tercera edad. \\ \hline
+E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores. & Calidad (Capacidad de interacción, Aprendizaje y Accesibilidad) & Producto & Sistema & Describe la facilidad y comodidad de uso orientada a las capacidades de las personas de la tercera edad. \\ \hline
 
-E11 & El proyecto debe entregarse en un plazo máximo de seis meses. & Restricción (Temporal / Calendario) & Proceso & Sistema & Fija una fecha límite para el calendario de trabajo del equipo, sin relación con el código en sí. \\ \hline
+E11 & El proyecto completo debe entregarse en un plazo máximo de seis meses. & Restricción (Temporal, Calendario) & Proceso & Sistema & Fija una fecha límite para el calendario de trabajo del equipo, sin relación con el código en sí. \\ \hline
 
-E12 & La sesión de un usuario se cerrará automáticamente tras 10 minutos sin actividad. & Funcional (Control de sesión) & Producto & Software & Indica la acción que tomará el programa para proteger la cuenta cuando el usuario deje de usarla. \\ \hline
+E12 & El sistema debe cerrar la sesión del usuario de forma automática tras 10 minutos de inactividad. & Funcional (Control de sesión) & Producto & Software & Indica la acción que tomará el programa para proteger la cuenta cuando el usuario deje de usarla. \\ \hline
 
-E13 & El quiosco de la sala de espera leerá el número de cédula ingresado en su pantalla táctil e imprimirá un ticket con el número de turno. & Funcional & Producto & Sistema & Detalla un servicio de recepción física que combina la pantalla táctil y la impresora del quiosco. \\ \hline
+E13 & El sistema debe permitir leer la cédula en pantalla táctil e imprimir un ticket de turno en el quiosco. & Funcional & Producto & Sistema & Detalla un servicio de recepción física que combina la pantalla táctil y la impresora del quiosco. \\ \hline
 
-E14 & La plataforma debe estar siempre disponible. & Calidad (Fiabilidad --- Disponibilidad) & Producto & Sistema & Requiere que el servicio web y móvil esté accesible y funcionando durante el horario de atención. \\ \hline
+E14 & La plataforma debe estar siempre disponible. & Calidad (Fiabilidad, Disponibilidad) & Producto & Sistema & Requiere que el servicio web y móvil esté accesible y funcionando durante el horario de atención. \\ \hline
 
-E15 & El director médico podrá generar un reporte mensual de inasistencias por especialidad. & Funcional & Producto & Software & Es una función que permite al directivo consultar y descargar resúmenes de citas no asistidas. \\ \hline
+E15 & El sistema debe permitir al director médico generar reportes mensuales de inasistencias por especialidad. & Funcional & Producto & Software & Es una función que permite al directivo consultar y descargar resúmenes de citas no asistidas. \\ \hline
 
-E16 & Cada incremento se validará con el director médico al final de cada iteración de dos semanas. & Restricción (Metodológica) & Proceso & Sistema & Define la forma de trabajo del equipo mediante revisiones quincenales con el directivo. \\ \hline
+E16 & El equipo debe validar cada incremento de software con el director médico cada dos semanas. & Restricción (Metodológica) & Proceso & Sistema & Define la forma de trabajo del equipo mediante revisiones quincenales con el directivo. \\ \hline
 
-E17 & El tratamiento de los datos personales de los pacientes debe cumplir la Ley Orgánica de Protección de Datos Personales del Ecuador. & Restricción (Legal / Regulatoria) & Producto & Sistema & Exige respetar las leyes ecuatorianas de protección de datos al manejar información de los pacientes. \\ \hline
+E17 & El manejo de información de pacientes debe cumplir la Ley Orgánica de Protección de Datos Personales. & Restricción (Legal, Regulatoria) & Producto & Sistema & Exige respetar las leyes ecuatorianas de protección de datos al manejar información de los pacientes. \\ \hline
 
-E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. & Calidad (Compatibilidad --- Interoperabilidad) & Producto & Sistema & Solicita que el nuevo programa logre comunicarse y compartir datos con el sistema de cobros actual. \\ \hline
+E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. & Calidad (Compatibilidad, Interoperabilidad) & Producto & Sistema & Solicita que el nuevo programa logre comunicarse y compartir datos con el sistema de cobros actual. \\ \hline
 
-E19 & Si el servidor principal falla, la plataforma debe restablecer el servicio en menos de 30 minutos sin perder ninguna cita confirmada. & Calidad (Fiabilidad --- Recuperabilidad) & Producto & Sistema & Fija el tiempo máximo de recuperación ante caídas del servidor y asegura que no se pierdan citas guardadas. \\ \hline
+E19 & El sistema debe restablecer el servicio en menos de 30 minutos sin perder citas tras fallar el servidor. & Calidad (Fiabilidad, Recuperabilidad) & Producto & Sistema & Fija el tiempo máximo de recuperación ante caídas del servidor y asegura que no se pierdan citas guardadas. \\ \hline
 
-E20 & Todo cambio en el código fuente será revisado por otro integrante del equipo antes de integrarse a la rama principal. & Restricción (Procedimental / Control de calidad) & Proceso & Software & Establece una regla interna de control para que ningún programador suba cambios sin la revisión de un compañero. \\ \hline
+E20 & Todo cambio en el código fuente debe ser revisado por otro integrante del equipo antes de integrarse. & Restricción (Procedimental, Control de calidad) & Proceso & Software & Establece una regla interna de control para que ningún programador suba cambios sin la revisión de un compañero. \\ \hline
 
 \end{xltabular}
 \end{small}
 
 \section{Cuantificación de Requisitos de Calidad}
 
-Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las buenas prácticas de ingeniería de requisitos \cite{pohl2025, iso29148}, se identificaron cinco enunciados ambiguos del caso de estudio (E03, E07, E10, E14 y E18). A continuación se transforman en requisitos de calidad verificables, definiendo para cada uno su característica de calidad, métrica, umbral exacto fundamentado en los datos del policlínico y método de verificación.
+Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las recomendaciones de ingeniería de requisitos \cite{pohl2025, iso29148}, se identificaron cinco enunciados ambiguos del caso de estudio (E03, E07, E10, E14 y E18). A continuación se transforman en requisitos de calidad verificables, definiendo para cada uno su característica de calidad, métrica, umbral exacto fundamentado en los datos del policlínico y método de verificación.
 
 \begin{enumerate}
     \item \textbf{Enunciado original (E03):} «La aplicación debe ser \textit{rápida}».
     \begin{itemize}
-        \item \textbf{Característica ISO/IEC 25010:2023:} Eficiencia de desempeño (Subcaracterística: Comportamiento temporal).
+        \item \textbf{Característica ISO/IEC 25010:2023:} Eficiencia de desempeño, Comportamiento temporal.
         \item \textbf{Requisito cuantificado (RNF-01):} En horarios de máxima demanda (lunes a las 07:00 con hasta 300 usuarios conectados de manera simultánea), la plataforma deberá cargar y mostrar la disponibilidad de citas médicas en un tiempo no mayor a 2,0 segundos para el 95\% de las solicitudes realizadas desde la web o la aplicación móvil.
         \item \textbf{Métrica y umbral:} Tiempo de respuesta en la consulta de turnos $\le 2,0$ segundos (percentil 95) bajo carga de 300 usuarios concurrentes.
         \item \textbf{Método de verificación:} Pruebas de rendimiento y estrés simulando 300 conexiones simultáneas contra la base de datos de citas.
@@ -112,7 +111,7 @@ Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las 
 
     \item \textbf{Enunciado original (E07):} «Los datos de salud de los pacientes deben estar \textit{seguros}».
     \begin{itemize}
-        \item \textbf{Característica ISO/IEC 25010:2023:} Seguridad (Subcaracterísticas: Confidencialidad e Integridad).
+        \item \textbf{Característica ISO/IEC 25010:2023:} Seguridad, Confidencialidad e Integridad.
         \item \textbf{Requisito cuantificado (RNF-02):} El 100\% de los datos médicos y personales de los pacientes almacenados y transmitidos deberán protegerse mediante protocolos de comunicación cifrada (TLS 1.3) y cifrado en base de datos (AES-256). Solo el médico con cita asignada y el propio paciente tendrán acceso a visualizar el detalle de la consulta médica, en conformidad con la Ley Orgánica de Protección de Datos Personales del Ecuador \cite{asamblea2021}.
         \item \textbf{Métrica y umbral:} Porcentaje de registros médicos cifrados = 100\%; intentos no autorizados permitidos = 0\%.
         \item \textbf{Método de verificación:} Auditoría técnica de seguridad sobre la base de datos e inspección de políticas de acceso por roles.
@@ -120,7 +119,7 @@ Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las 
 
     \item \textbf{Enunciado original (E10):} «La plataforma debe ser \textit{fácil de usar} para los pacientes adultos mayores».
     \begin{itemize}
-        \item \textbf{Característica ISO/IEC 25010:2023:} Capacidad de interacción / Usabilidad (Subcaracterística: Facilidad de aprendizaje y Accesibilidad).
+        \item \textbf{Característica ISO/IEC 25010:2023:} Capacidad de interacción, Facilidad de aprendizaje y Accesibilidad.
         \item \textbf{Requisito cuantificado (RNF-03):} Al menos el 85\% de una muestra de pacientes mayores de 60 años deberá lograr reservar una cita médica desde un teléfono con Android 10 en un tiempo menor o igual a 4 minutos en su primer intento, sin requerir asistencia de otra persona.
         \item \textbf{Métrica y umbral:} Tasa de finalización exitosa de la reserva $\ge 85\%$; tiempo por intento $\le 4$ minutos.
         \item \textbf{Método de verificación:} Prueba práctica de usabilidad en la sala de espera con un grupo piloto de 20 pacientes mayores de 60 años.
@@ -128,7 +127,7 @@ Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las 
 
     \item \textbf{Enunciado original (E14):} «La plataforma debe estar \textit{siempre disponible}».
     \begin{itemize}
-        \item \textbf{Característica ISO/IEC 25010:2023:} Fiabilidad (Subcaracterística: Disponibilidad).
+        \item \textbf{Característica ISO/IEC 25010:2023:} Fiabilidad, Disponibilidad.
         \item \textbf{Requisito cuantificado (RNF-04):} La plataforma deberá mantener una disponibilidad mensual mínima del 99,8\% dentro del horario de atención del policlínico (lunes a sábado de 07:00 a 19:00), tolerando un tiempo máximo acumulado de caída no programada de 36 minutos al mes.
         \item \textbf{Métrica y umbral:} Porcentaje de operatividad mensual en horario de consulta $\ge 99,8\%$ (caída máxima no programada $\le 36$ minutos al mes).
         \item \textbf{Método de verificación:} Reportes mensuales automáticos emitidos por herramientas de monitoreo continuo del servidor web.
@@ -136,7 +135,7 @@ Siguiendo los lineamientos de la norma ISO/IEC 25010:2023 \cite{iso25010} y las 
 
     \item \textbf{Enunciado original (E18):} «La plataforma debe integrarse \textit{sin problemas} con el sistema de facturación actual».
     \begin{itemize}
-        \item \textbf{Característica ISO/IEC 25010:2023:} Compatibilidad (Subcaracterística: Interoperabilidad).
+        \item \textbf{Característica ISO/IEC 25010:2023:} Compatibilidad, Interoperabilidad.
         \item \textbf{Requisito cuantificado (RNF-05):} La plataforma deberá comunicarse con el servicio web del sistema de facturación existente para registrar cada cobro generado, confirmando la transacción en menos de 2,0 segundos y alcanzando una tasa de éxito mínima del 99,9\% en el envío de datos válidos, reintentando automáticamente en caso de fallas de red.
         \item \textbf{Métrica y umbral:} Tiempo de respuesta de integración $\le 2,0$ segundos; tasa de éxito en el registro de cobros $\ge 99,9\%$.
         \item \textbf{Método de verificación:} Pruebas de integración automatizadas entre el módulo de reservas y el servicio web de facturación.
@@ -166,9 +165,9 @@ Como parte de la actividad, se realizó una sesión de comparación de resultado
 En cumplimiento de la Norma 8 de la actividad formativa y del Código de Ética de la ACM \cite{acm2018}, se detalla de manera transparente el uso de herramientas de inteligencia artificial durante la realización de este taller:
 
 \begin{itemize}
-    \item \textbf{Herramienta y versión:} Asistente de inteligencia artificial Antigravity (motor Gemini 3.8 Flash, versión actualizada a octubre de 2026).
-    \item \textbf{Propósito exclusivo de apoyo:} Soporte técnico en la sintaxis de \LaTeX\ (configuración del paquete de tablas paginadas \texttt{xltabular} para evitar desbordamientos visuales) y revisión de coherencia de estilo y ortografía en el texto.
-    \item \textbf{Forma de verificación aplicada por el estudiante:} El autor revisó, validó y defendió personalmente cada una de las clasificaciones de los 20 enunciados frente a las definiciones formales de las normas ISO/IEC 25010:2023 e ISO/IEC/IEEE 29148. Asimismo, todos los cálculos numéricos de los requisitos cuantificados se determinaron a partir de los datos específicos del caso (300 usuarios simultáneos, 35\% de pacientes mayores de 60 años, horario de 72 horas semanales) y se comprobó la compilación reproducible del documento en el entorno local con \texttt{pdfLaTeX}.
+    \item \textbf{Herramienta utilizada:} Gemini.
+    \item \textbf{Propósito exclusivo de apoyo:} Se utilizó Gemini para corregir errores ortográficos, revisar signos de puntuación (como comas y puntos), mejorar la estructura gramatical y organizar el formato del código en \LaTeX.
+    \item \textbf{Forma de verificación aplicada por el estudiante:} Todo el análisis técnico, la identificación de los tipos de requisitos y la clasificación de los 20 enunciados fueron revisados y validados personalmente por el autor con base en las normas ISO/IEC 25010:2023 e ISO/IEC/IEEE 29148. Asimismo, los valores numéricos y umbrales de los requisitos de calidad fueron calculados directamente a partir de los datos del caso de estudio, comprobando finalmente la compilación limpia del documento en \texttt{pdfLaTeX}.
 \end{itemize}
 
 \begin{thebibliography}{5}
@@ -178,11 +177,11 @@ K.~Pohl, \emph{Requirements Engineering: Fundamentals, Principles, and Technique
   0.5em minus 0.4em\relax Berlin, Heidelberg, Germany: Springer, 2025. ISBN 978-3-662-69204-2.
 
 \bibitem{iso29148}
-ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018. Systems and software engineering --- Life cycle processes --- Requirements engineering}.\hskip 1em plus
+ISO/IEC/IEEE, \emph{ISO/IEC/IEEE 29148:2018. Systems and software engineering, Life cycle processes, Requirements engineering}.\hskip 1em plus
   0.5em minus 0.4em\relax International Standard, 2018.
 
 \bibitem{iso25010}
-ISO/IEC, \emph{ISO/IEC 25010:2023. Systems and software engineering --- Systems and software quality requirements and evaluation (SQuaRE) --- Product quality model}.\hskip 1em plus
+ISO/IEC, \emph{ISO/IEC 25010:2023. Systems and software engineering, Systems and software quality requirements and evaluation (SQuaRE), Product quality model}.\hskip 1em plus
   0.5em minus 0.4em\relax International Standard, 2023.
 
 \bibitem{asamblea2021}

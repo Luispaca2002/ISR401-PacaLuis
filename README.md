@@ -2,8 +2,7 @@
 
 **Estudiante:** Luis Alberto Paca Pilataza  
 **Asignatura:** Ingeniería de Requerimientos (ISR-401)  
-**Nivel y Paralelo:** 4.º Nivel de Software  
-**Docente:** Gleiston Cicerón Guerrero Ulloa, PhD  
+**Nivel y Paralelo:** 4.º Nivel de Software, Paralelo A  
 **Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)  
 
 ---
@@ -17,7 +16,7 @@ Este repositorio contiene la solución completa de la actividad formativa **FORM
   1. Tabla de clasificación de los 20 enunciados (E01 a E20) evaluados en tres dimensiones con justificación directa.
   2. Cuantificación de los 5 requisitos de calidad ambiguos (RNF-01 a RNF-05) con métricas, umbrales y métodos de verificación basados en el caso.
   3. Discusión y resolución técnica de discrepancias con un compañero (enunciados E02 y E10).
-  4. Declaración de uso ético de Inteligencia Artificial (Norma 8).
+  4. Declaración de uso de Inteligencia Artificial (Gemini para corrección ortográfica, gramatical y formato).
   5. Referencias bibliográficas en formato IEEE.
 * `main.pdf`: Documento final compilado.
 * `referencias.bib`: Archivo de bibliografía en formato BibTeX.
