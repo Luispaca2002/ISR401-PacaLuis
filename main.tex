@@ -49,6 +49,29 @@ E20 & El equipo deberá revisar mediante pares todo cambio documental o fuente a
 
 \section{Cuantificación de Requisitos de Calidad}
 
+En cumplimiento con las directrices de cuantificación y la norma ISO/IEC 25010:2023, se transforman los cinco enunciados ambiguos en requisitos de calidad verificables:
+
+\begin{enumerate}
+    \item \textbf{Enunciado original (E03):} La aplicación debe ser rápida. \\
+    \textbf{RNF-01 (Eficiencia de desempeño - Comportamiento temporal):} Bajo una carga pico de 300 usuarios concurrentes (lunes a las 07:00), el sistema deberá responder a la consulta de disponibilidad de citas en menos de 2 segundos para el percentil 95 de las peticiones. \\
+    \textit{Verificación:} Prueba de estrés y carga en entorno simulado.
+
+    \item \textbf{Enunciado original (E07):} Los datos de salud de los pacientes deben estar seguros. \\
+    \textbf{RNF-02 (Seguridad - Confidencialidad):} El sistema deberá garantizar que el 100\% de las transacciones con datos de salud requieran autenticación de doble factor, asegurando que solo el médico asignado pueda acceder, conforme a la LOPDP del Ecuador. \\
+    \textit{Verificación:} Auditoría de seguridad y control de accesos.
+
+    \item \textbf{Enunciado original (E10):} La plataforma debe ser fácil de usar para los pacientes adultos mayores. \\
+    \textbf{RNF-03 (Interaction capability - Aprendizaje):} Un paciente mayor de 60 años, sin experiencia tecnológica previa, deberá poder completar el proceso de agendar una cita mediante un teléfono Android de gama media en menos de 4 minutos en su primer intento. \\
+    \textit{Verificación:} Prueba de usabilidad presencial con grupo focal.
+
+    \item \textbf{Enunciado original (E14):} La plataforma debe estar siempre disponible. \\
+    \textbf{RNF-04 (Fiabilidad - Disponibilidad):} El sistema deberá garantizar una disponibilidad mensual mínima del 99.8\% durante el horario operativo del policlínico (lunes a sábado de 07:00 a 19:00), permitiendo un máximo de 51 minutos de caída al mes. \\
+    \textit{Verificación:} Análisis mensual de bitácoras (logs) de monitoreo del servicio.
+
+    \item \textbf{Enunciado original (E18):} La plataforma debe integrarse sin problemas con el sistema de facturación actual. \\
+    \textbf{RNF-05 (Compatibilidad - Interoperabilidad):} El sistema deberá consumir la interfaz de servicios web del proveedor externo para registrar el 100\% de los cobros efectivos, con un tiempo de respuesta de integración menor a 1.5 segundos y una tasa de error de transmisión inferior al 0.1\%. \\
+    \textit{Verificación:} Pruebas de integración automatizadas de la API.
+\end{enumerate}
 
 \section{Discusión y Discrepancias}
 
