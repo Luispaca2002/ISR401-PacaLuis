@@ -56,6 +56,41 @@ Uno de los mayores riesgos en la Ingeniería de Requisitos es la ambigüedad lin
 
 En conclusión, la adopción de la norma IEEE 29148 obliga al analista a abandonar la redacción coloquial y adoptar un rigor técnico-documental, asegurando que el producto final sea trazable, medible y, sobre todo, validable operativamente.
 
+\section{Glosario de Términos (Cláusula 3 de IEEE 29148)}
+A continuación, se definen diez términos fundamentales de la Ingeniería de Requisitos extraídos de la norma, acompañados de su aplicación práctica al contexto de la aplicación móvil Tuenti Ecuador:
+
+\begin{description}
+    \item[1. Requisito (Requirement):] Enunciado que traduce una necesidad en una capacidad observable y verificable que debe poseer el sistema. \\
+    \textit{Ejemplo en Tuenti:} El sistema deberá permitir al cliente consultar su saldo de megas y minutos disponibles en la pantalla principal.
+
+    \item[2. Restricción (Constraint):] Condición externa y no negociable que limita las opciones de diseño, arquitectura o implementación. \\
+    \textit{Ejemplo en Tuenti:} La aplicación deberá cumplir obligatoriamente con las normativas técnicas de ARCOTEL y la LOPDP para el manejo de datos telefónicos.
+
+    \item[3. Stakeholder (Parte interesada):] Individuo, grupo u organización que tiene un interés, derecho o participación legítima en el sistema. \\
+    \textit{Ejemplo en Tuenti:} El usuario final (cliente prepago), el departamento de marketing y los integradores de pasarelas de pago (ej. Kushki).
+
+    \item[4. Sistema (System):] Combinación de elementos interactuantes (hardware, software, personas, procesos) organizados para lograr un objetivo. \\
+    \textit{Ejemplo en Tuenti:} La plataforma integral, que abarca la app (software), los servidores de facturación (hardware), la red de telecomunicaciones y el usuario.
+
+    \item[5. Entorno (Environment):] Contexto o condiciones físicas, lógicas y operativas bajo las cuales el sistema funcionará. \\
+    \textit{Ejemplo en Tuenti:} El sistema operativo (Android/iOS) de los teléfonos operando bajo conexiones de red celular 3G/4G con señal fluctuante.
+
+    \item[6. Verificación (Verification):] Confirmación, mediante evidencia objetiva, de que el producto de software cumple estrictamente con los requisitos especificados en el documento. \\
+    \textit{Ejemplo en Tuenti:} Ejecutar un script de pruebas de calidad (QA) para comprobar que el botón de "Comprar Combo" ejecuta la transacción en menos de 2 segundos.
+
+    \item[7. Validación (Validation):] Confirmación de que el sistema cumple con su uso previsto y resuelve la necesidad real del usuario en su entorno operativo. \\
+    \textit{Ejemplo en Tuenti:} Pruebas de usabilidad (Beta) con un grupo de jóvenes para asegurar que la interfaz de la ruleta de premios es fácil de entender y utilizar.
+
+    \item[8. Usuario (User):] Persona u organización que interactúa directamente con el sistema para beneficiarse de su operación en tiempo de ejecución. \\
+    \textit{Ejemplo en Tuenti:} El cliente ecuatoriano que inicia sesión en la aplicación desde su dispositivo para gestionar su línea móvil.
+
+    \item[9. Baseline (Línea base):] Especificación formal y acordada que sirve como base para el desarrollo posterior y solo puede modificarse mediante control de cambios. \\
+    \textit{Ejemplo en Tuenti:} El Documento de Requisitos de Software (ERS) aprobado y firmado por el gerente de producto antes de empezar a programar la versión 3.0 de la app.
+
+    \item[10. Trazabilidad (Traceability):] Grado en que se puede establecer y rastrear una relación lógica entre dos o más artefactos del proceso de desarrollo. \\
+    \textit{Ejemplo en Tuenti:} El enlace documentado entre la regla de negocio de "Renovación automática", el requisito funcional RF-05 que lo implementa, y su respectivo caso de prueba.
+\end{description}
+
 % Aquí insertaremos la siguiente parte...
 
 \end{document}
