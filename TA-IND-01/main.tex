@@ -36,6 +36,26 @@ Según la cláusula 5.2.4 de la norma IEEE 29148, para que un enunciado sea cons
     \item \textbf{Conforme:} Debe respetar el formato, estilo y uso de verbos modales definidos en las plantillas del proyecto.
 \end{itemize}
 
+\subsection{Características del Conjunto de Requisitos}
+Además de las propiedades individuales, el estándar establece que la especificación completa (el documento en su totalidad) debe evaluarse como un conjunto unificado. Un grupo de requisitos bien estructurado debe ser:
+\begin{itemize}
+    \item \textbf{Completo:} El conjunto debe cubrir todas las necesidades del sistema, sin omitir ninguna capacidad o restricción esencial para su funcionamiento en el entorno real.
+    \item \textbf{Consistente:} Los requisitos no deben contradecirse entre sí (por ejemplo, exigir máxima seguridad con procesos largos y, al mismo tiempo, exigir tiempos de respuesta menores a un milisegundo).
+    \item \textbf{Asequible:} El costo y esfuerzo de implementar todo el conjunto debe estar dentro del presupuesto y los recursos asignados al proyecto.
+    \item \textbf{Delimitado:} Debe definir claramente el alcance (lo que el sistema hará) y dejar fuera lo que no corresponde, evitando el crecimiento descontrolado del proyecto (\textit{scope creep}).
+\end{itemize}
 
+\subsection{Términos Ambiguos Prohibidos por la Norma}
+Uno de los mayores riesgos en la Ingeniería de Requisitos es la ambigüedad lingüística. La norma prohíbe estrictamente el uso de lenguaje subjetivo, ya que imposibilita la creación de pruebas de aceptación objetivas. Entre los términos vetados destacan:
+\begin{itemize}
+    \item \textbf{Adjetivos y adverbios subjetivos:} Palabras como \textit{rápido, seguro, amigable, fácil, robusto, intuitivo, eficientemente} o \textit{oportunamente}. Estas deben reemplazarse por métricas exactas.
+    \item \textbf{Términos absolutos inalcanzables:} Expresiones como \textit{100\% confiable, siempre disponible} o \textit{nunca fallará}. En su lugar, se utilizan porcentajes de fiabilidad técnica o métricas de recuperación.
+    \item \textbf{Listas abiertas:} El uso de \textit{etc., entre otros} o \textit{incluyendo pero no limitándose a}. Un requisito debe ser explícito y cerrado en sus límites.
+    \item \textbf{Cuantificadores vagos:} Palabras como \textit{algunos, varios, la mayoría} o verbos difusos como \textit{minimizar/maximizar}.
+\end{itemize}
+
+En conclusión, la adopción de la norma IEEE 29148 obliga al analista a abandonar la redacción coloquial y adoptar un rigor técnico-documental, asegurando que el producto final sea trazable, medible y, sobre todo, validable operativamente.
+
+% Aquí insertaremos la siguiente parte...
 
 \end{document}
