@@ -144,6 +144,39 @@ RES-05 & \textbf{Retención de auditoría.} La plataforma deberá retener los me
 
 \end{xltabular}
 
+\section{Autoevaluación y Corrección de Requisitos}
+Durante el proceso de elicitación, los requisitos suelen redactarse de forma coloquial. Conforme a la cláusula 5.2.4 de la norma IEEE 29148, se realizó una autoevaluación de los 15 borradores iniciales para identificar ambigüedades y omisiones. A continuación, se presenta el análisis de los defectos y su transformación a la versión final (documentada en la Sección previa).
+
+\subsection{Corrección de Requisitos Funcionales}
+\begin{itemize}
+    \item \textbf{RF-01:} \textit{Borrador:} ``El usuario debe poder entrar con un código.'' $\rightarrow$ \textbf{Defecto:} Incompleto y ambiguo. No especifica cómo se envía el código ni qué datos se necesitan. $\rightarrow$ \textbf{Corrección:} Se especificó el uso del número telefónico y la validación OTP vía SMS.
+    \item \textbf{RF-02:} \textit{Borrador:} ``La app debe mostrar lo que le queda al usuario.'' $\rightarrow$ \textbf{Defecto:} Falta de singularidad y uso de términos vagos (``lo que le queda''). $\rightarrow$ \textbf{Corrección:} Se detalló explícitamente ``saldo principal en USD, megas, minutos y SMS''.
+    \item \textbf{RF-03:} \textit{Borrador:} ``Se pueden comprar combos fácilmente.'' $\rightarrow$ \textbf{Defecto:} Uso del adjetivo subjetivo ``fácilmente'' (prohibido por la norma). $\rightarrow$ \textbf{Corrección:} Se redactó la condición de disparo y el uso de tarjeta registrada.
+    \item \textbf{RF-04:} \textit{Borrador:} ``Avisar cuando los megas se estén acabando.'' $\rightarrow$ \textbf{Defecto:} Condición no verificable (``se estén acabando''). $\rightarrow$ \textbf{Corrección:} Se estableció el umbral exacto del ``80\% de consumo'' y el método ``notificación push''.
+    \item \textbf{RF-05:} \textit{Borrador:} ``Ver historial de pagos.'' $\rightarrow$ \textbf{Defecto:} Incompleto, no define el límite de tiempo. $\rightarrow$ \textbf{Corrección:} Se delimitó temporalmente a ``los últimos 90 días'' ordenados cronológicamente.
+\end{itemize}
+
+\subsection{Corrección de Requisitos de Calidad (No Funcionales)}
+\begin{itemize}
+    \item \textbf{RNF-01:} \textit{Borrador:} ``La aplicación debe ser rápida.'' $\rightarrow$ \textbf{Defecto:} Ambigüedad total. Imposible de probar. $\rightarrow$ \textbf{Corrección:} Se aplicó ISO 25010 (Eficiencia temporal) con una métrica de ``$<2$ segundos para el percentil 95''.
+    \item \textbf{RNF-02:} \textit{Borrador:} ``Los pagos deben ser seguros.'' $\rightarrow$ \textbf{Defecto:} Falta de especificidad técnica. $\rightarrow$ \textbf{Corrección:} Se cuantificó la característica de Confidencialidad exigiendo el enmascaramiento ``**** 1234''.
+    \item \textbf{RNF-03:} \textit{Borrador:} ``La app nunca debe caerse.'' $\rightarrow$ \textbf{Defecto:} Uso de término absoluto inalcanzable (``nunca''). $\rightarrow$ \textbf{Corrección:} Se definió una Disponibilidad técnica realista del 99.9\% (máximo 43 min/mes).
+    \item \textbf{RNF-04:} \textit{Borrador:} ``Debe ser muy intuitiva para nuevos usuarios.'' $\rightarrow$ \textbf{Defecto:} Adjetivo subjetivo ``intuitiva''. $\rightarrow$ \textbf{Corrección:} Se midió la Operabilidad limitando la acción a un máximo de 3 clics.
+    \item \textbf{RNF-05:} \textit{Borrador:} ``No deben perderse las recargas.'' $\rightarrow$ \textbf{Defecto:} Redacción negativa y sin métrica de tolerancia. $\rightarrow$ \textbf{Corrección:} Se fijó una tasa de error de integridad inferior al 0.01\%.
+\end{itemize}
+
+\subsection{Corrección de Restricciones}
+\begin{itemize}
+    \item \textbf{RES-01:} \textit{Borrador:} ``Debe funcionar en cualquier celular moderno.'' $\rightarrow$ \textbf{Defecto:} Ambigüedad (``cualquier'', ``moderno''). $\rightarrow$ \textbf{Corrección:} Se especificaron versiones base: Android 9.0+ e iOS 13+.
+    \item \textbf{RES-02:} \textit{Borrador:} ``Respetar la privacidad del usuario.'' $\rightarrow$ \textbf{Defecto:} No cita la base legal impositiva. $\rightarrow$ \textbf{Corrección:} Se exigió el cumplimiento explícito y auditable de la LOPDP de Ecuador.
+    \item \textbf{RES-03:} \textit{Borrador:} ``Usar una pasarela de pagos externa.'' $\rightarrow$ \textbf{Defecto:} Falta de restricción de interfaz exacta. $\rightarrow$ \textbf{Corrección:} Se obligó el uso exclusivo de la API REST de Kushki Pagos.
+    \item \textbf{RES-04:} \textit{Borrador:} ``Actualizar el sistema sin molestar al cliente.'' $\rightarrow$ \textbf{Defecto:} Redacción no técnica. $\rightarrow$ \textbf{Corrección:} Se impuso la restricción organizacional de usar despliegues Blue-Green.
+    \item \textbf{RES-05:} \textit{Borrador:} ``Guardar los datos por mucho tiempo.'' $\rightarrow$ \textbf{Defecto:} Variable de tiempo indefinida. $\rightarrow$ \textbf{Corrección:} Se alineó con la norma regulatoria de ARCOTEL (retención de 5 años).
+\end{itemize}
+
+\section{Reflexión Final}
+La ejecución de esta especificación académica sobre la aplicación móvil Tuenti Ecuador evidencia que la redacción de requisitos es un proceso disciplinado que va mucho más allá de la simple recolección de deseos del usuario. Al aplicar rigurosamente la norma IEEE 29148, se hace evidente que el lenguaje natural, por su propia naturaleza, está plagado de ambigüedades, suposiciones implícitas y adjetivos subjetivos que son fatales para la ingeniería de software. Transformar un deseo como ``la app debe ser rápida y segura'' en atributos medibles mediante la ISO/IEC 25010:2023 (como un percentil 95 de respuesta menor a 2 segundos y enmascaramiento de datos) representa la diferencia fundamental entre un proyecto propenso al fracaso por expectativas no alineadas, y un sistema cuyo éxito puede ser verificado, auditado y validado contractualmente mediante criterios de aceptación exactos.
+
 % Aquí insertaremos la siguiente parte...
 
 \end{document}
