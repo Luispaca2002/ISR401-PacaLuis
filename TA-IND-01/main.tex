@@ -5,6 +5,7 @@
 \geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{xltabular}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{cite}
@@ -90,6 +91,58 @@ A continuación, se definen diez términos fundamentales de la Ingeniería de Re
     \item[10. Trazabilidad (Traceability):] Grado en que se puede establecer y rastrear una relación lógica entre dos o más artefactos del proceso de desarrollo. \\
     \textit{Ejemplo en Tuenti:} El enlace documentado entre la regla de negocio de "Renovación automática", el requisito funcional RF-05 que lo implementa, y su respectivo caso de prueba.
 \end{description}
+
+\section{Formulación, Clasificación y Criterios de Aceptación}
+
+Los enunciados siguientes constituyen una especificación académica propuesta para la aplicación móvil Tuenti Ecuador, no una descripción interna certificada del producto. Las funciones observables se contrastaron con el comportamiento actual de la app; los procesos, interfaces y umbrales de calidad se proponen rigurosamente para evaluación académica conforme a IEEE 29148 e ISO/IEC 25010:2023.
+
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\begin{xltabular}{\textwidth}{|c|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}X|}
+\caption{Clasificación y Criterios de Aceptación de Requisitos} \label{tab:requisitos_tuenti} \\
+\hline
+\textbf{ID} & \textbf{Requisito Formulado} & \textbf{Tipo / ISO 25010} & \textbf{Criterio de Aceptación (GWT)} \\ \hline
+\endfirsthead
+\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continuación de la página anterior}} \\
+\hline
+\textbf{ID} & \textbf{Requisito Formulado} & \textbf{Tipo / ISO 25010} & \textbf{Criterio de Aceptación (GWT)} \\ \hline
+\endhead
+\hline \multicolumn{4}{|r|}{{Continúa en la siguiente página...}} \\ \hline
+\endfoot
+\hline
+\endlastfoot
+
+RF-01 & \textbf{Inicio de sesión OTP.} Tras ingresar un número telefónico válido, la aplicación deberá validar un código de un solo uso (OTP) enviado por SMS antes de otorgar acceso. & Funcional & \textbf{Dado} un usuario en login, \textbf{Cuando} ingresa el OTP correcto, \textbf{Entonces} accede a la interfaz principal. \\ \hline
+
+RF-02 & \textbf{Consulta de saldos.} Tras autenticar al usuario, la aplicación deberá mostrar el saldo principal en USD, megas, minutos y SMS vigentes en la pantalla de inicio. & Funcional & \textbf{Dado} un login exitoso, \textbf{Entonces} los saldos consolidados se visualizan de inmediato en el dashboard. \\ \hline
+
+RF-03 & \textbf{Compra de combos.} Cuando el usuario confirme la selección de un paquete, la aplicación deberá procesar el cobro con la tarjeta registrada y habilitar el servicio. & Funcional & \textbf{Dado} un combo seleccionado, \textbf{Cuando} confirma la compra, \textbf{Entonces} se debita el valor y se asignan los megas. \\ \hline
+
+RF-04 & \textbf{Notificación de consumo.} Cuando el cliente alcance el 80\% de consumo de su cuota de datos, la plataforma deberá emitir una alerta automática mediante notificación push. & Funcional & \textbf{Cuando} el consumo cruza el umbral del 80\%, \textbf{Entonces} el dispositivo recibe la alerta push. \\ \hline
+
+RF-05 & \textbf{Movimientos recientes.} Cuando el cliente acceda a la vista de historial, la aplicación deberá listar cronológicamente las recargas y consumos de los últimos 90 días. & Funcional & \textbf{Dado} el menú de historial, \textbf{Cuando} se abre la vista, \textbf{Entonces} muestra la lista filtrable a 3 meses. \\ \hline
+
+RNF-01 & \textbf{Tiempo de renderizado.} Bajo conexión 4G, la aplicación deberá cargar la interfaz de saldos en menos de 2 segundos para el percentil 95 de las sesiones. & Calidad (Eficiencia: Comportamiento temporal) & \textbf{Cuando} el usuario abre la app, \textbf{Entonces} el saldo se hace visible en $<2$s (verificado con pruebas de carga). \\ \hline
+
+RNF-02 & \textbf{Enmascaramiento de pagos.} Al visualizar los métodos de pago, la aplicación deberá ocultar el número de la tarjeta mostrando únicamente los últimos cuatro dígitos. & Calidad (Seguridad: Confidencialidad) & \textbf{Dado} el gestor de tarjetas, \textbf{Entonces} los datos sensibles se renderizan como "**** 1234". \\ \hline
+
+RNF-03 & \textbf{Disponibilidad operativa.} Durante el mes calendario, la plataforma deberá mantener una disponibilidad de servicio del 99.9\%, admitiendo un máximo de 43 min. de caída. & Calidad (Fiabilidad: Disponibilidad) & \textbf{Dado} el reporte de SLA mensual, \textbf{Entonces} el \textit{uptime} de la API central es $\ge99.9$\%. \\ \hline
+
+RNF-04 & \textbf{Flujo de recarga rápido.} Desde la pantalla principal, la aplicación deberá permitir a un usuario adquirir una recarga en un máximo de tres interacciones táctiles. & Calidad (Interaction cap.: Operabilidad) & \textbf{Dado} el dashboard principal, \textbf{Cuando} se ejecuta una compra rápida, \textbf{Entonces} se completa en $\le3$ clics. \\ \hline
+
+RNF-05 & \textbf{Integridad de transacciones.} Al procesar compras masivas, la plataforma deberá operar con una tasa de error de transmisión de cobros inferior al 0.01\%. & Calidad (Seguridad: Integridad) & \textbf{Cuando} ocurren picos de transacciones, \textbf{Entonces} los cruces de base de datos no muestran transacciones perdidas. \\ \hline
+
+RES-01 & \textbf{Compatibilidad nativa.} Para su distribución, la aplicación deberá ser compatible operativamente con las versiones Android 9.0 (o superior) e iOS 13 (o superior). & Restricción (Producto: Tecnológica) & \textbf{Dado} un equipo con Android 9, \textbf{Entonces} la app compila, se instala y ejecuta sin fallos de SO. \\ \hline
+
+RES-02 & \textbf{Registro de consentimiento.} En el primer uso, la aplicación deberá registrar auditablemente el consentimiento del usuario conforme a la ley LOPDP del Ecuador. & Restricción (Producto: Legal) & \textbf{Dado} un nuevo registro, \textbf{Entonces} la base de datos guarda un log inmutable de aceptación de términos. \\ \hline
+
+RES-03 & \textbf{Pasarela financiera.} Para la liquidación de pagos, la aplicación deberá integrarse de forma exclusiva con los endpoints de la API REST de Kushki Pagos. & Restricción (Producto: Interfaz) & \textbf{Cuando} se dispara el pago, \textbf{Entonces} la solicitud de red se enruta y autentica contra servidores Kushki. \\ \hline
+
+RES-04 & \textbf{Despliegues sin cortes.} Al liberar actualizaciones de tarifas, el equipo técnico deberá aplicar un esquema de despliegue Blue-Green para garantizar cero caídas. & Restricción (Proceso: Organizacional) & \textbf{Cuando} se actualiza producción, \textbf{Entonces} las sesiones de usuarios concurrentes no se desconectan. \\ \hline
+
+RES-05 & \textbf{Retención de auditoría.} La plataforma deberá retener los metadatos de las transacciones por un período mínimo de 5 años, alineándose a la regulación ARCOTEL. & Restricción (Producto: Normativa) & \textbf{Dado} un requerimiento legal, \textbf{Entonces} el administrador puede extraer respaldos consolidados de hasta 5 años. \\ \hline
+
+\end{xltabular}
 
 % Aquí insertaremos la siguiente parte...
 
